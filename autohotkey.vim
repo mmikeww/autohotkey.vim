@@ -33,9 +33,11 @@ syn region  autohotkeyComment
       \ start='^\s*/\*'
       \ end='^\s*\*/'
 
+" only these chars are valid as escape sequences:   ,%`;nrbtvaf
+" https://autohotkey.com/docs/commands/_EscapeChar.htm
 syn match   autohotkeyEscape
       \ display
-      \ '`.'
+      \ '`[,%`;nrbtvaf]'
 
 syn match   autohotkeyHotkey
       \ contains=autohotkeyKey,
