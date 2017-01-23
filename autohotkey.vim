@@ -92,14 +92,12 @@ syn region autohotkeyString
       \ end=+"+
       \ contains=autohotkeyEscape
 
-syn region autohotkeyVariable
+syn match autohotkeyVariable
       \ display
       \ oneline
       \ contains=autohotkeyBuiltinVariable
-      \ matchgroup=autohotkeyVariableDelimiter
-      \ start="%"
-      \ end="%"
       \ keepend
+      \ '%\S\{-}%'
 
 syn keyword autohotkeyBuiltinVariable
       \ A_Space A_Tab
