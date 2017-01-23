@@ -17,72 +17,11 @@ syn keyword autohotkeyTodo
       \ contained
       \ TODO FIXME XXX NOTE
 
-syn cluster autohotkeyCommentGroup
-      \ contains=
-      \   autohotkeyTodo,
-      \   @Spell
-
-syn match   autohotkeyComment
-      \ display
-      \ contains=@autohotkeyCommentGroup
-      \ '\%(^;\|\s\+;\).*$'
-
-syn region  autohotkeyComment
-      \ contains=@autohotkeyCommentGroup
-      \ matchgroup=autohotkeyCommentStart
-      \ start='^\s*/\*'
-      \ end='^\s*\*/'
-
 " only these chars are valid as escape sequences:   ,%`;nrbtvaf
 " https://autohotkey.com/docs/commands/_EscapeChar.htm
 syn match   autohotkeyEscape
       \ display
       \ '`[,%`;nrbtvaf]'
-
-syn match   autohotkeyHotkey
-      \ contains=autohotkeyKey,
-      \   autohotkeyHotkeyDelimiter
-      \ display
-      \ '^.\{-}::'
-
-syn match   autohotkeyKey
-      \ contained
-      \ display
-      \ '^.\{-}'
-
-syn match   autohotkeyDelimiter
-      \ contained
-      \ display
-      \ '::'
-
-" allowable hotstring options:
-" https://autohotkey.com/docs/Hotstrings.htm
-syn match   autohotkeyHotstringDefinition
-      \ contains=autohotkeyHotstring,
-      \   autohotkeyHotstringDelimiter
-      \ display
-      \ '^\s*:\%([*?]\|[BORZ]0\?\|C[01]\?\|K\d\+\|P\d\+\|S[IPE]\)*:.\{-}::'
-
-syn match   autohotkeyHotstring
-      \ contained
-      \ display
-      \ '.\{-}'
-
-syn match   autohotkeyHotstringDelimiter
-      \ contained
-      \ display
-      \ '::'
-
-syn match   autohotkeyHotstringDelimiter
-      \ contains=autohotkeyHotstringOptions
-      \ contained
-      \ display
-      \ ':\%([*?]\|[BORZ]0\?\|C[01]\?\|K\d\+\|P\d\+\|S[IPE]\)*:'
-
-syn match   autohotkeyHotstringOptions
-      \ contained
-      \ display
-      \ '\%([*?]\|[BORZ]0\?\|C[01]\?\|K\d\+\|P\d\+\|S[IPE]\)*'
 
 syn region autohotkeyString
       \ display
@@ -271,6 +210,67 @@ syn keyword autohotkeyType
 syn keyword autohotkeyBoolean
       \ true
       \ false
+
+syn match   autohotkeyHotkey
+      \ contains=autohotkeyKey,
+      \   autohotkeyHotkeyDelimiter
+      \ display
+      \ '^.\{-}::'
+
+syn match   autohotkeyKey
+      \ contained
+      \ display
+      \ '^.\{-}'
+
+syn match   autohotkeyDelimiter
+      \ contained
+      \ display
+      \ '::'
+
+" allowable hotstring options:
+" https://autohotkey.com/docs/Hotstrings.htm
+syn match   autohotkeyHotstringDefinition
+      \ contains=autohotkeyHotstring,
+      \   autohotkeyHotstringDelimiter
+      \ display
+      \ '^\s*:\%([*?]\|[BORZ]0\?\|C[01]\?\|K\d\+\|P\d\+\|S[IPE]\)*:.\{-}::'
+
+syn match   autohotkeyHotstring
+      \ contained
+      \ display
+      \ '.\{-}'
+
+syn match   autohotkeyHotstringDelimiter
+      \ contained
+      \ display
+      \ '::'
+
+syn match   autohotkeyHotstringDelimiter
+      \ contains=autohotkeyHotstringOptions
+      \ contained
+      \ display
+      \ ':\%([*?]\|[BORZ]0\?\|C[01]\?\|K\d\+\|P\d\+\|S[IPE]\)*:'
+
+syn match   autohotkeyHotstringOptions
+      \ contained
+      \ display
+      \ '\%([*?]\|[BORZ]0\?\|C[01]\?\|K\d\+\|P\d\+\|S[IPE]\)*'
+
+syn cluster autohotkeyCommentGroup
+      \ contains=
+      \   autohotkeyTodo,
+      \   @Spell
+
+syn match   autohotkeyComment
+      \ display
+      \ contains=@autohotkeyCommentGroup
+      \ '\%(^;\|\s\+;\).*$'
+
+syn region  autohotkeyComment
+      \ contains=@autohotkeyCommentGroup
+      \ matchgroup=autohotkeyCommentStart
+      \ start='^\s*/\*'
+      \ end='^\s*\*/'
 
 " TODO: Shouldn't we look for g:, b:,  variables before defaulting to
 " something?
