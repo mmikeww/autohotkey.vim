@@ -55,11 +55,13 @@ syn match   autohotkeyDelimiter
       \ display
       \ '::'
 
+" allowable hotstring options:
+" https://autohotkey.com/docs/Hotstrings.htm
 syn match   autohotkeyHotstringDefinition
       \ contains=autohotkeyHotstring,
       \   autohotkeyHotstringDelimiter
       \ display
-      \ '^:\%(B0\|C1\|K\d\+\|P\d\+\|S[IPE]\|Z\d\=\|[*?COR]\)*:.\{-}::'
+      \ '^\s*:\%([*?]\|[BORZ]0\?\|C[01]\?\|K\d\+\|P\d\+\|S[IPE]\)*:.\{-}::'
 
 syn match   autohotkeyHotstring
       \ contained
@@ -75,12 +77,12 @@ syn match   autohotkeyHotstringDelimiter
       \ contains=autohotkeyHotstringOptions
       \ contained
       \ display
-      \ ':\%(B0\|C1\|K\d\+\|P\d\+\|S[IPE]\|Z\d\=\|[*?COR]\):'
+      \ ':\%([*?]\|[BORZ]0\?\|C[01]\?\|K\d\+\|P\d\+\|S[IPE]\)*:'
 
 syn match   autohotkeyHotstringOptions
       \ contained
       \ display
-      \ '\%(B0\|C1\|K\d\+\|P\d\+\|S[IPE]\|Z\d\=\|[*?COR]\)'
+      \ '\%([*?]\|[BORZ]0\?\|C[01]\?\|K\d\+\|P\d\+\|S[IPE]\)*'
 
 syn region autohotkeyString
       \ display
