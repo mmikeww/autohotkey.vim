@@ -25,13 +25,13 @@ syn cluster autohotkeyCommentGroup
 syn match   autohotkeyComment
       \ display
       \ contains=@autohotkeyCommentGroup
-      \ '`\@<!;.*$'
+      \ '\%(^;\|\s\+;\).*$'
 
 syn region  autohotkeyComment
       \ contains=@autohotkeyCommentGroup
       \ matchgroup=autohotkeyCommentStart
-      \ start='/\*'
-      \ end='\*/'
+      \ start='^\s*/\*'
+      \ end='^\s*\*/'
 
 syn match   autohotkeyEscape
       \ display
