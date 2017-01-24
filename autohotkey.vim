@@ -1,8 +1,10 @@
 " Vim syntax file
 " Language:         AutoHotkey script file
-" Maintainer:       SungHyun Nam <goweol@gmail.com>
-" Previous Maintainer:       Nikolai Weibull <now@bitwi.se>
-" Latest Revision:  2015-10-29
+" Maintainer:       Michael Wong
+"                   https://github.com/mmikeww/autohotkey.vim
+" Latest Revision:  2017-01-23
+" Previous Maintainers:       SungHyun Nam <goweol@gmail.com>
+"                             Nikolai Weibull <now@bitwi.se>
 
 if exists("b:current_syntax")
   finish
