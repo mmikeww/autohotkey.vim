@@ -2,7 +2,7 @@
 " Language:         AutoHotkey script file
 " Maintainer:       Michael Wong
 "                   https://github.com/mmikeww/autohotkey.vim
-" Latest Revision:  2017-02-20
+" Latest Revision:  2017-03-22
 " Previous Maintainers:       SungHyun Nam <goweol@gmail.com>
 "                             Nikolai Weibull <now@bitwi.se>
 
@@ -106,6 +106,7 @@ syn keyword autohotkeyCommand
       \ FormatTime IfInString IfNotInString Sort StringCaseSense StringGetPos
       \ StringLeft StringRight StringLower StringUpper StringMid StringReplace
       \ StringSplit StringTrimLeft StringTrimRight StringLen
+      \ StrSplit StrReplace Throw
       \ Control ControlClick ControlFocus ControlGet ControlGetFocus
       \ ControlGetPos ControlGetText ControlMove ControlSend ControlSendRaw
       \ ControlSetText Menu PostMessage SendMessage SetControlDelay
@@ -119,17 +120,18 @@ syn keyword autohotkeyCommand
       \ SetCapsLockState SetNumLockState SetScrollLockState
 
 syn keyword autohotkeyFunction
-      \ InStr RegExMatch RegExReplace StrLen SubStr Asc Chr
+      \ InStr RegExMatch RegExReplace StrLen SubStr Asc Chr Func
       \ DllCall VarSetCapacity WinActive WinExist IsLabel OnMessage 
       \ Abs Ceil Exp Floor Log Ln Mod Round Sqrt Sin Cos Tan ASin ACos ATan
       \ FileExist GetKeyState NumGet NumPut StrGet StrPut RegisterCallback
       \ IsFunc Trim LTrim RTrim IsObject Object Array FileOpen
       \ ComObjActive ComObjArray ComObjConnect ComObjCreate ComObjGet
       \ ComObjError ComObjFlags ComObjQuery ComObjType ComObjValue ComObject
+      \ Format Exception
 
 syn keyword autohotkeyStatement
       \ Break Continue Exit ExitApp Gosub Goto OnExit Pause Return
-      \ Suspend Reload
+      \ Suspend Reload new class extends
 
 syn keyword autohotkeyRepeat
       \ Loop
