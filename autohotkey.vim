@@ -2,7 +2,7 @@
 " Language:         AutoHotkey script file
 " Maintainer:       Michael Wong
 "                   https://github.com/mmikeww/autohotkey.vim
-" Latest Revision:  2017-03-22
+" Latest Revision:  2017-04-03
 " Previous Maintainers:       SungHyun Nam <goweol@gmail.com>
 "                             Nikolai Weibull <now@bitwi.se>
 
@@ -219,7 +219,7 @@ syn match   autohotkeyHotkey
       \ contains=autohotkeyKey,
       \   autohotkeyHotkeyDelimiter
       \ display
-      \ '^.\{-}::'
+      \ '^\s*\S*\%( Up\)\?::'
 
 syn match   autohotkeyKey
       \ contained
