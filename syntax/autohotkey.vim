@@ -1,8 +1,8 @@
 " Vim syntax file
-" Language:         AutoHotkey script file
+" Language:         AutoHotkey v1.1 script file
 " Maintainer:       Michael Wong
 "                   https://github.com/mmikeww/autohotkey.vim
-" Latest Revision:  2022-07-25
+" Latest Revision:  2022-05-02
 " Previous Maintainers:       SungHyun Nam <goweol@gmail.com>
 "                             Nikolai Weibull <now@bitwi.se>
 
@@ -74,6 +74,7 @@ syn keyword autohotkeyBuiltinVariable
       \ A_LoopFileTimeAccessed A_LoopFileAttrib A_LoopFileSize A_LoopFileSizeKB A_LoopFileSizeMB
       \ A_LoopRegType A_LoopRegKey A_LoopRegSubKey A_LoopRegTimeModified
       \ A_TimeIdleKeyboard A_TimeIdleMouse A_ListLines A_ComSpec A_LoopFilePath A_Args
+      \ A_InitialWorkingDir A_Clipboard
 
 syn match   autohotkeyBuiltinVariable
       \ contained
@@ -129,7 +130,7 @@ syn keyword autohotkeyFunction
       \ IsFunc Trim LTrim RTrim IsObject Object Array FileOpen
       \ ComObjActive ComObjArray ComObjConnect ComObjCreate ComObjGet
       \ ComObjError ComObjFlags ComObjQuery ComObjType ComObjValue ComObject
-      \ Format Exception Ord InputHook
+      \ Format Exception Ord InputHook VerCompare IsSet
 
 syn keyword autohotkeyStatement
       \ Break Continue Exit ExitApp Gosub Goto OnExit Pause Return
@@ -181,6 +182,7 @@ syn keyword autohotkeyPreProc
       \ InputLevel
       \ MenuMaskKey
       \ Warn
+      \ Requires
 
 syn keyword autohotkeyMatchClass
       \ ahk_group ahk_class ahk_id ahk_pid ahk_exe
